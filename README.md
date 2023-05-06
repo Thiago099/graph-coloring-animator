@@ -13,3 +13,7 @@ https://github.com/Thiago099/graph-coloring/blob/master/README.md
 this file you can use it here to generate your animation:
 
 https://thiago099.github.io/graph-coloring-animator/
+
+
+source code:
+https://github.com/Thiago099/graph-coloring-animator

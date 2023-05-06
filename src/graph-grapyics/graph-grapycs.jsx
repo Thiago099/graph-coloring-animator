@@ -41,5 +41,33 @@ function UseGraphGraphics({width, height})
         link.click()
     }
 
-    return {canvas,clear,save, circle, line}
+    function useRecord()
+    {
+        var recordedChunks = [];
+        var stream = canvas.captureStream(25 /*fps*/);
+        const mediaRecorder = new MediaRecorder(stream, {
+            mimeType: "video/webm;codecs=opus,vp8"
+        });
+        
+        mediaRecorder.start(100);
+
+        mediaRecorder.ondataavailable = function (event) {
+            recordedChunks.push(event.data);
+        }
+
+        function stop()
+        {
+            mediaRecorder.stop();
+            return new Promise((resolve, reject) => {
+                mediaRecorder.onstop = function (event) {
+                    var blob = new Blob(recordedChunks, {type: "video/webm" });
+                    var url = URL.createObjectURL(blob);
+                    resolve(url);
+                }
+            })
+        }
+        return {stop}
+    }
+
+    return {canvas,useRecord,clear,save, circle, line}
 }

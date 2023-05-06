@@ -17,4 +17,4 @@ source code:
 https://github.com/Thiago099/graph-coloring-animator
 
 
-if you want to save the graph as a video you need to use a broser that supports the codec "video/webm;codecs=opus,vp8" it is recomended you use microsoft edge
+If you want to save the graph as a video you need to use a browser that supports the codec "video/webm;codecs=opus, vp8" it is recommended you use Microsoft edge

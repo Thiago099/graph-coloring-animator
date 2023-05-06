@@ -1,7 +1,5 @@
 # graph-coloring-animator
 
-## This program only works in chromium based browser and was only tested in microsft edge
-
 This program generates a automaitc animation from a graph coloring algorithim.
 
 You can draw your graph using this application, and them press ctrl + s to generete the save file
@@ -17,3 +15,6 @@ https://thiago099.github.io/graph-coloring-animator/
 
 source code:
 https://github.com/Thiago099/graph-coloring-animator
+
+
+if you want to save the graph as a video you need to use a broser that supports the codec "video/webm;codecs=opus,vp8" it is recomended you use microsoft edge

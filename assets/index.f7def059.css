@@ -1,0 +1,1 @@
+body{margin:0;height:100vh;display:flex;justify-content:center;align-items:center;background-color:#000}.column{display:flex;flex-direction:column}button{width:100px;margin:10px;padding:10px;border:1px solid white;border-radius:5px;background-color:#000;color:#fff;cursor:pointer}button:hover{background-color:#004eff}canvas{border:1px solid white}

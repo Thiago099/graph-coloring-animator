@@ -4,9 +4,7 @@ This program generates a automaitc animation from a graph coloring algorithim.
 
 You can draw your graph using this application: https://github.com/Thiago099/graph-coloring/blob/master/README.md
 
-Them press ctrl + s to generete the save file, and generate the animation by uploading here:
-
-https://thiago099.github.io/graph-coloring-animator/
+Them press ctrl + s to generete the save file, and generate the animation by uploading here: https://thiago099.github.io/graph-coloring-animator/
 
 (Make sure to position your graph at the top left corner as the program uses absolute position)
 

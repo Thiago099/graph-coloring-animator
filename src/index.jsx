@@ -20,10 +20,13 @@ async function main()
     const sim = await fetch('./sim.json').then(response => response.json())
     const model = await fetch('./model.json').then(response => response.json())
     let color_ids = sim.graphs[0].map(() => 0)
+    var prev = [...color_ids]
     for(const c in sim.graphs)
     {
         const selected = sim.nodes[c]
+        prev = [...color_ids]
         draw()
+        prev = [...color_ids]
         color_ids = sim.graphs[c]
         draw()
         function draw()
@@ -61,16 +64,32 @@ async function main()
                 }
                 else
                 {
-                    circle({
-                        x:x,
-                        y:y,
-                        r:14, 
-                        border: {
-                            color: 'black',
-                            width: 2
-                        },
-                        color: colors[color_ids[node]]
-                    })
+                    if(prev[node] == color_ids[node])
+                    {
+                        circle({
+                            x:x,
+                            y:y,
+                            r:14, 
+                            border: {
+                                color: 'black',
+                                width: 2
+                            },
+                            color: colors[color_ids[node]]
+                        })
+                    }
+                    else
+                    {
+                        circle({
+                            x:x,
+                            y:y,
+                            r:20, 
+                            border: {
+                                color: 'black',
+                                width: 2
+                            },
+                            color: colors[color_ids[node]]
+                        })
+                    }
                 }
             }
             save()
